@@ -21,6 +21,7 @@ def readline(r="arg", line=""):
         return command
 def interpret(code):
     line = 0
+    codelines = code.split("\n")
     def error(error="this command is not available at the moment", l=line):
         print(f"An error has occured at line {l}: {error}")
     def initial(args):
@@ -50,3 +51,6 @@ def interpret(code):
         "repeatuntil": error,
         "sys.out.printvar": error,
     }
+    for codeline in codelines:
+        commands[readline(r="cmd", line=codelines[line])]()
+        line += 1
