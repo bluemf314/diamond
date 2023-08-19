@@ -37,7 +37,7 @@ def interpret(code):
         else:
             error("Variable does not exist (Use the \"underground()\" command to declare new variables.)", l=line)
     variables = {
-        "#version": "1.0 release"
+        "#version": "1.0 release",
         "#input": "?"
     }
     commands = {
