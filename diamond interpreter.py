@@ -3,15 +3,15 @@
 # sys.in.scaninput()
 # changevar("guess","=","#input")
 # tostring("guess")
-# if("guess","<",34,"{")
+# if "$guess" < 34
 # sys.out.println("Too low!")
-# if("guess","<",34,"}")
-# if("guess",">",34,"{")
+# }
+# if "$guess" > 34 {
 # sys.out.println("Too high!")
-# if("guess",">",34,"}")
-# if("guess","=",34,"{")
+# }
+# if "$guess" == 34 {
 # sys.out.println("it is 34!")
-# if("guess","=",34,"}")
+# }
 def readline(r="arg", line=""):
     command = line.split("(")[0]
     args = line.split("(")[1].split(")")[0].split(",")
